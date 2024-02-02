@@ -1,0 +1,90 @@
+@import '../index.scss';
+
+.main-layout {
+  display: flex;
+  height: 100%;
+
+  .main-body {
+    padding: 1.5rem 2rem;
+    overflow-y: auto;
+    margin-left: 350px;
+    min-height: calc(100vh - 100px);
+    width: 100%;
+
+    &.full {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 127px;
+  }
+}
+
+
+
+// sidebar styles -------------------
+.sidebar-container {
+  background-color: var(--bs-secondary-color);
+  width: 350px;
+  position: fixed;
+  height: 100%;
+  padding: 20px 20px;
+
+  .sidebar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #8b8a8a;
+
+    .avatar {
+      background-color: var(--bs-primary-color);
+      text-transform: uppercase;
+      color: var(--bs-secondary-color);
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      justify-content: center;
+    }
+
+    .user-name {
+      color: var(--bs-primary-color);
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  .sidebar-body {
+    padding-top: 40px;
+
+    .nav-menu {
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+
+      div {
+        color: var(--bs-primary-color);
+      }
+
+      &.active {
+        background-color: var(--bs-primary-color);
+
+        div {
+          color: var(--bs-secondary-color);
+        }
+      }
+
+      &:hover {
+        background-color: #8b8a8a;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import '../index.scss';
+// Login modal style starts
+.login-modal {
+    .modal-content {
+        background: var(--bs-primary-color) !important;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1),
+            -6px -6px 10px -1px rgba(255, 255, 255, 0.7) !important;
+        border: none !important;
+
+        .modal-body{
+            padding: 0;
+        }
+    }
+
+    .login-modal-content {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        .col-md-6{
+            padding: 0;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+        .right-col{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 40px;
+            .login-heading{
+                color: var(--bs-secondary-color);
+            }
+        }
+    }
+}
+
+.form-modal-backdrop {
+    background: var(--bs-primary-color) !important;
+}
+.section-title{
+    text-align: left;
+    padding: 20px 0px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--bs-secondary-color);
+}
+// products list page -------------------------------------------------
+.products-section{
+    .products-list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+}
+@media (max-width: 1300px) {
+    .products-list {
+        grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media (max-width: 900px) {
+    .products-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .products-list {
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+//   profile-section
+
+.profile-section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 30px;
+        color: var(--bs-secondary-color);
+        font-weight: 600;
+    }
+}
